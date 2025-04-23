@@ -1,0 +1,62 @@
+# PURVANG KHONDE 
+Boston, MA | khonde.p@northeastern.edu | +1(617)406-7238 | LinkedIn | GitHub 
+
+## PROFESSIONAL SUMMARY 
+Accomplished Full Stack Developer with 6+ years of experience in designing scalable web applications. Proficient in HTML, CSS, 
+JavaScript (React, Angular), Node.js, Python, and database management (MySQL, MongoDB). Experienced in deploying applications 
+on AWS and Azure. 
+
+## EDUCATION 
+**Northeastern University, Boston**                                                                                                                                                       (Expected 2026) 
+MS. Information Systems                                                                                                                                                                         GPA : 3.13 / 4 
+Relevant Coursework: Web Development, Data Structures & Algorithms, Software Engineering, Cloud Computing, Database 
+Management Systems, Application Engineering and Development. 
+
+**Dr. Vishwanath Karad MIT World Peace University (MIT-WPU)-Pune, India**                                                                                         June 2023 
+B.TECH in Computer Science and Engineering                                                                                                                                    GPA: 7.70 / 10 
+Relevant Coursework: Machine Learning, Operating Systems, Computer Networks, Object-Oriented Programming, Artificial 
+Intelligence, 
+
+## WORK EXPERIENCE 
+**Ekatva Groups(Mumbai, India) - Full Stack Developer**                                          January 2024 – July 2024 
+- Developed responsive, dynamic web interfaces using HTML, CSS, and JavaScript frameworks. 
+- Collaborated in Agile sprint planning, delivering web solutions aligned with client specifications. 
+- Enhanced code modularity and UI/UX performance to meet client expectations. 
+
+**Aasua Engineering Solutions Pvt. Ltd. (Nashik, India) - Intern**                                                                                            June 23 - December 23 
+- Led the design and development of user-friendly web applications, enhancing user experience by 25% through intuitive 
+interfaces and optimized workflows. 
+- Designed and implemented responsive layouts, ensuring seamless compatibility across multiple devices and platforms. 
+- Collaborated with cross-functional teams to troubleshoot issues and improve system performance, achieving a 15% 
+reduction in load times. 
+
+**VidyarthiMitra Org. (Pune, India) - Intern**                                                                                                                                   March 22 – June 22  
+- Automated repetitive data processing tasks using Python scripts, reducing manual workload by 40% and saving 10+ hours 
+per week. 
+- Developed custom automation tools tailored to organizational needs, increasing operational efficiency and accuracy by 
+30%. 
+- Contributed to database optimization efforts, improving data retrieval speeds by 20%. 
+
+## SKILLS 
+**Programming Languages** - Java, C++, Python, TypeScript 
+**Web & Backend**: HTML, CSS, JavaScript, React, Node.js, GraphQL, RESTful API, Express.js 
+**Databases**: MySQL, MongoDB 
+**Concepts**: OOP, Data Structures, Algorithms, Operating Systems, Computer Networks 
+**Cloud & Tools**: AWS, Azure, JIRA, VS Code, Bruno 
+
+## PROJECTS   
+**Health360**                                                                                                                                                                         November 24 – December 24  
+- Developed a Progressive Web Application (PWA) for healthcare and insurance management with secure user 
+authentication, payment processing, and appointment scheduling. 
+- Integrated WHO Disease Outbreak Tracker using RESTful APIs and visualized real-time data with interactive maps and 
+charts. 
+- Built a scalable backend with Node.js, Express, and MongoDB, and a responsive UI using React, TypeScript, and Tailwind 
+CSS. 
+- Enabled offline access, multi-language support, and seamless user experience with PWA features. 
+
+**Traffic Sign Classification Using CNN**                                                                                                                                     November 22 – May 23 
+- Played a key role in the comprehensive process of dataset collection, model training, and rigorous project testing. 
+- Demonstrated close engagement from the inception of the project, contributing significantly to each phase, ensuring the 
+project's success. 
+- Successfully achieved an impressive accuracy rate of 98% through persistent efforts and strategic enhancements during the 
+project lifecycle.
