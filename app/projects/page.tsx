@@ -6,6 +6,36 @@ import Image from "next/image"
 
 const projects = [
   {
+    title: "Husky Sniffs",
+    date: "2025",
+    description: [
+      "Designed and developed an AI-powered lost and found mobile platform using SwiftUI, enabling over 100 users to report, search, and match items based on title, category, location, and image similarity with 85% accuracy in test cases.",
+      "Integrated Core Data for offline support and implemented a real-time chat system with avatar previews, timestamps, and unread message filtering, reducing resolution time by 60% between item owners and finders.",
+      "Led user research through surveys and persona creation, uncovering key usability pain points and informing UI decisions that improved task completion rates by 40% during A/B testing cycles.",
+      "Applied accessibility and design system standards with dynamic text support, screen reader compatibility, and Northeastern-themed branding, ensuring inclusive and consistent user experience across devices.",
+    ],
+    image: "/images/husky-sniffs-logo.png",
+    tags: [
+      "AI Matching",
+      "UX Design",
+      "SwiftUI",
+      "Core Data",
+      "Mobile App",
+      "Lost & Found",
+      "User Research",
+      "Chat System",
+      "Prototyping",
+      "Accessibility",
+      "Design Systems",
+      "iOS Development",
+      "Data Persistence",
+      "Campus App",
+      "Usability Testing",
+      "Human-Centered Design",
+      "Information Architecture",
+    ],
+  },
+  {
     title: "Husky Match",
     date: "2024",
     description: [
@@ -101,7 +131,7 @@ export default function ProjectsPage() {
               className="h-full"
             >
               <Card className="bg-gray-900/50 border-gray-800 overflow-hidden hover:border-gray-600 transition-colors h-full flex flex-col">
-                <div className="relative h-32 sm:h-40 w-full bg-gradient-to-b from-gray-900 to-transparent">
+                <div className="relative h-32 sm:h-40 w-full">
                   <Image
                     src={project.image || "/placeholder.svg"}
                     alt={project.title}
