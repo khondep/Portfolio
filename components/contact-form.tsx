@@ -7,7 +7,6 @@ import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { motion, AnimatePresence } from "framer-motion"
 import { Check, Loader2, AlertCircle } from "lucide-react"
-import emailjs from "@emailjs/browser"
 
 export function ContactForm() {
   const [isSubmitting, setIsSubmitting] = useState(false)
@@ -21,27 +20,23 @@ export function ContactForm() {
     setError(null)
 
     try {
-      // Initialize EmailJS with your public key
-      emailjs.init("YOUR_PUBLIC_KEY") // Replace with your actual EmailJS public key
-
+      // For demonstration purposes only
+      // In a real application, you would use EmailJS or another email service
+      // This simulates the email sending process
       const form = e.target as HTMLFormElement
       const formData = new FormData(form)
 
-      // Add recipient email as a hidden field
-      const templateParams = {
-        to_email: "khonde.p@northeastern.edu",
-        from_name: formData.get("name"),
-        from_email: formData.get("email"),
+      // Log form data to console (for demonstration)
+      console.log("Form submission:", {
+        name: formData.get("name"),
+        email: formData.get("email"),
         message: formData.get("message"),
-      }
+      })
 
-      // Send the email using EmailJS
-      await emailjs.send(
-        "YOUR_SERVICE_ID", // Replace with your EmailJS service ID
-        "YOUR_TEMPLATE_ID", // Replace with your EmailJS template ID
-        templateParams,
-      )
+      // Simulate API call delay
+      await new Promise((resolve) => setTimeout(resolve, 1500))
 
+      // Simulate successful submission
       setIsSubmitting(false)
       setIsSubmitted(true)
 
@@ -53,9 +48,9 @@ export function ContactForm() {
         }
       }, 3000)
     } catch (err) {
-      console.error("Error sending email:", err)
+      console.error("Error in form submission:", err)
       setIsSubmitting(false)
-      setError("Failed to send message. Please try again or contact directly via email.")
+      setError("This is a demo form. In a real application, your message would be sent to khonde.p@northeastern.edu")
     }
   }
 
@@ -98,7 +93,7 @@ export function ContactForm() {
             />
           </div>
           {error && (
-            <div className="text-red-500 flex items-center gap-2 text-xs sm:text-sm">
+            <div className="text-amber-400 flex items-center gap-2 text-xs sm:text-sm">
               <AlertCircle className="h-3 w-3 sm:h-4 sm:w-4" />
               <span>{error}</span>
             </div>

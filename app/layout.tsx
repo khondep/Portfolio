@@ -6,7 +6,6 @@ import { ThemeProvider } from "@/components/theme-provider"
 import { Navigation } from "@/components/navigation"
 import { TimeDisplay } from "@/components/time-display"
 import { ThemeToggle } from "@/components/theme-toggle"
-import Script from "next/script"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -24,9 +23,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <head>
-        <Script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js" />
-      </head>
+      <head>{/* Removed EmailJS script */}</head>
       <body className={inter.className}>
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
           <div className="min-h-screen bg-gradient-to-br from-emerald-950 to-gray-950 dark:from-gray-900 dark:to-gray-950">
