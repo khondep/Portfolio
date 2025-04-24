@@ -3,6 +3,8 @@
 import { motion } from "framer-motion"
 import { Card, CardContent, CardHeader } from "@/components/ui/card"
 import Image from "next/image"
+import { Github, ExternalLink } from "lucide-react"
+import Link from "next/link"
 
 const projects = [
   {
@@ -15,6 +17,7 @@ const projects = [
       "Applied accessibility and design system standards with dynamic text support, screen reader compatibility, and Northeastern-themed branding, ensuring inclusive and consistent user experience across devices.",
     ],
     image: "/images/husky-sniffs-logo.png",
+    github: "https://github.com/khondep/HuskySniffs",
     tags: [
       "AI Matching",
       "UX Design",
@@ -46,6 +49,7 @@ const projects = [
       "Integrated accessibility considerations and iterative usability testing to ensure an inclusive and frictionless experience for all users.",
     ],
     image: "/images/husky-match-logo.png",
+    liveApp: "https://husky-linkup-78.lovable.app/",
     tags: ["UX Design", "AI", "User Research", "Prototyping", "Mentorship Platform"],
   },
   {
@@ -61,6 +65,7 @@ const projects = [
     ],
     image:
       "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/DALL%C2%B7E%202025-02-20%2019.35.19%20-%20A%20professional%20logo%20for%20'Comprehensive%20Insurance%20Management%20Ecosystem'.%20The%20design%20should%20feature%20a%20modern%20shield%20symbolizing%20protection%20and%20security,-B1b2vZpqDSE9KfkTuk8m4GZ75vRXHg.webp",
+    github: "https://github.com/khondep/AED-Group-Project",
     tags: ["SQL", "React.js", "Node.js", "Express.js", "Middleware Integration"],
   },
   {
@@ -74,6 +79,7 @@ const projects = [
     ],
     image:
       "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Health%20360.jpg-dv2gnvMLgLMXYPcccoGlm8Itu4EbrM.jpeg",
+    github: "https://github.com/info-6150-fall-2024/final-project-akatsuki",
     tags: ["React", "Node.js", "MongoDB", "PWA"],
   },
   {
@@ -142,6 +148,26 @@ export default function ProjectsPage() {
                 <CardHeader className="space-y-1 p-3 sm:p-4 pb-0">
                   <div className="flex justify-between items-start">
                     <h3 className="text-lg sm:text-xl font-semibold text-white">{project.title}</h3>
+                    <div className="flex gap-2">
+                      {project.github && (
+                        <Link href={project.github} target="_blank" rel="noopener noreferrer">
+                          <Github
+                            size={20}
+                            className="text-gray-400 hover:text-white transition-colors"
+                            aria-label={`GitHub repository for ${project.title}`}
+                          />
+                        </Link>
+                      )}
+                      {project.liveApp && (
+                        <Link href={project.liveApp} target="_blank" rel="noopener noreferrer">
+                          <ExternalLink
+                            size={20}
+                            className="text-gray-400 hover:text-white transition-colors"
+                            aria-label={`Live demo for ${project.title}`}
+                          />
+                        </Link>
+                      )}
+                    </div>
                   </div>
                   {project.date && <p className="text-xs sm:text-sm text-gray-400">{project.date}</p>}
                 </CardHeader>
