@@ -55,7 +55,7 @@ export default function HomePage() {
         >
           <div className="relative aspect-square w-full">
             <Image
-              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/261DD9A9-3B11-4E5D-9B5C-09DB7770C494_1_105_c-JXZutTSJ42BBlTURzw30Yzk3f4OIN2.jpeg"
+              src="/images/design-mode/261DD9A9-3B11-4E5D-9B5C-09DB7770C494_1_105_c.jpeg"
               alt="Purvang Khonde in Boston"
               fill
               className="rounded-xl object-cover"
@@ -102,7 +102,7 @@ export default function HomePage() {
 }
 
 function TypewriterEffect() {
-  const designations = ["Full Stack Developer", "UX Designer", "Business Analyst"]
+  const designations = ["Mobile App Developer","Full Stack Developer", "UX Designer", "Business Analyst" ]
 
   const [currentDesignation, setCurrentDesignation] = useState("")
   const [currentIndex, setCurrentIndex] = useState(0)

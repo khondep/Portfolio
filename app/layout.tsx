@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   title: "Purvang Khonde - Portfolio",
   description: "Full Stack Developer and Software Engineer",
   viewport: "width=device-width, initial-scale=1, maximum-scale=5",
-    generator: 'v0.dev'
+    generator: 'v0.app'
 }
 
 export default function RootLayout({

@@ -131,7 +131,7 @@ export default function AboutPage() {
       >
         <div className="relative w-[200px] h-[250px] sm:w-[250px] sm:h-[350px] md:w-[300px] md:h-[400px] mb-4 md:mb-0 md:mr-8">
           <Image
-            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/80B4C15B-0104-487C-AE14-C7641D9662C4_1_105_c-9DBpxwdvUOx1E3r9SsLHdlxGMq9F6p.jpeg"
+            src="/images/design-mode/80B4C15B-0104-487C-AE14-C7641D9662C4_1_105_c.jpeg"
             alt="Purvang Khonde"
             fill
             className="rounded-xl object-cover object-top"
