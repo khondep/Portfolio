@@ -57,3 +57,14 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* Added reduced motion support for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+  svg feGaussianBlur {
+    stdDeviation: 0 !important;
+  }
+}

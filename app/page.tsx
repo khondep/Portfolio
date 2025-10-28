@@ -8,6 +8,7 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Github, Linkedin, FileDown, Mail, Phone } from "lucide-react"
 import { useState, useEffect } from "react"
+import FadeIn from "@/components/FadeIn"
 
 export default function HomePage() {
   return (
@@ -28,13 +29,13 @@ export default function HomePage() {
           </p>
           <div className="flex flex-wrap justify-center lg:justify-start gap-3 sm:gap-4">
             <Link href="https://www.linkedin.com/in/purvangk/" target="_blank" rel="noopener noreferrer">
-              <Button variant="outline" className="gap-2 text-sm sm:text-base">
+              <Button variant="outline" className="gap-2 text-sm sm:text-base bg-transparent">
                 <Linkedin size={18} />
                 LinkedIn
               </Button>
             </Link>
             <Link href="https://github.com/khondep" target="_blank" rel="noopener noreferrer">
-              <Button variant="outline" className="gap-2 text-sm sm:text-base">
+              <Button variant="outline" className="gap-2 text-sm sm:text-base bg-transparent">
                 <Github size={18} />
                 GitHub
               </Button>
@@ -65,12 +66,8 @@ export default function HomePage() {
         </motion.div>
       </div>
 
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 0.2 }}
-      >
-        <Card className="bg-gray-900/50 border-gray-800">
+      <FadeIn>
+        <Card className="bg-gray-900/50 border-gray-800 backdrop-blur-sm">
           <CardContent className="p-4 sm:p-6">
             <h2 className="text-xl sm:text-2xl font-semibold text-white mb-4 sm:mb-6">Get in Touch</h2>
             <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-4 sm:mb-6 gap-3 sm:gap-4">
@@ -96,13 +93,13 @@ export default function HomePage() {
             <ContactForm />
           </CardContent>
         </Card>
-      </motion.div>
+      </FadeIn>
     </div>
   )
 }
 
 function TypewriterEffect() {
-  const designations = ["Mobile App Developer","Full Stack Developer", "UX Designer", "Business Analyst" ]
+  const designations = ["Mobile App Developer", "Full Stack Developer", "UX Designer", "Business Analyst"]
 
   const [currentDesignation, setCurrentDesignation] = useState("")
   const [currentIndex, setCurrentIndex] = useState(0)
@@ -112,10 +109,8 @@ function TypewriterEffect() {
   useEffect(() => {
     const timeout = setTimeout(
       () => {
-        // Current word being processed
         const designation = designations[currentIndex]
 
-        // If deleting, remove a character, otherwise add a character
         if (isDeleting) {
           setCurrentDesignation(designation.substring(0, currentChar - 1))
           setCurrentChar((prev) => prev - 1)
@@ -124,18 +119,15 @@ function TypewriterEffect() {
           setCurrentChar((prev) => prev + 1)
         }
 
-        // If word is complete, start deleting after a pause
         if (!isDeleting && currentChar === designation.length) {
           setTimeout(() => setIsDeleting(true), 1500)
-        }
-        // If deletion is complete, move to next word
-        else if (isDeleting && currentChar === 0) {
+        } else if (isDeleting && currentChar === 0) {
           setIsDeleting(false)
           setCurrentIndex((currentIndex + 1) % designations.length)
         }
       },
       isDeleting ? 50 : 100,
-    ) // Typing is slower than deleting
+    )
 
     return () => clearTimeout(timeout)
   }, [currentDesignation, currentChar, currentIndex, isDeleting, designations])

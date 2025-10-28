@@ -5,6 +5,8 @@ import { Card, CardContent, CardHeader } from "@/components/ui/card"
 import Image from "next/image"
 import { Github, ExternalLink } from "lucide-react"
 import Link from "next/link"
+import GooeyContainer from "@/components/GooeyContainer"
+import FadeIn from "@/components/FadeIn"
 
 const projects = [
   {
@@ -129,14 +131,8 @@ export default function ProjectsPage() {
         <h1 className="text-3xl sm:text-4xl font-bold text-white mb-6 sm:mb-8">Projects</h1>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
           {projects.map((project, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="h-full"
-            >
-              <Card className="bg-gray-900/50 border-gray-800 overflow-hidden hover:border-gray-600 transition-colors h-full flex flex-col">
+            <FadeIn key={index}>
+              <Card className="bg-gray-900/50 border-gray-800 overflow-hidden hover:border-gray-600 transition-colors h-full flex flex-col backdrop-blur-sm">
                 <div className="relative h-32 sm:h-40 w-full">
                   <Image
                     src={project.image || "/placeholder.svg"}
@@ -177,19 +173,23 @@ export default function ProjectsPage() {
                       <li key={itemIndex}>{item}</li>
                     ))}
                   </ul>
-                  <div className="flex flex-wrap gap-1.5 sm:gap-2 mt-3 sm:mt-4">
-                    {project.tags.map((tag, tagIndex) => (
-                      <span
-                        key={tagIndex}
-                        className="px-1.5 sm:px-2 py-0.5 sm:py-1 bg-gray-800 text-gray-300 rounded-md text-[10px] sm:text-xs"
-                      >
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
+                  <GooeyContainer>
+                    <div className="flex flex-wrap gap-1.5 sm:gap-2 mt-3 sm:mt-4">
+                      {project.tags.map((tag, tagIndex) => (
+                        <motion.span
+                          key={tagIndex}
+                          className="px-1.5 sm:px-2 py-0.5 sm:py-1 bg-gray-800 text-gray-300 rounded-md text-[10px] sm:text-xs"
+                          whileHover={{ scale: 1.06 }}
+                          transition={{ type: "spring", stiffness: 250, damping: 18 }}
+                        >
+                          {tag}
+                        </motion.span>
+                      ))}
+                    </div>
+                  </GooeyContainer>
                 </CardContent>
               </Card>
-            </motion.div>
+            </FadeIn>
           ))}
         </div>
       </motion.div>
