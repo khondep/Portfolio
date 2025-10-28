@@ -40,7 +40,11 @@ export default function HomePage() {
                 GitHub
               </Button>
             </Link>
-            <Link href="/Purvang_Khonde_Resume.html" target="_blank" rel="noopener noreferrer">
+            <Link
+              href="https://northeastern-my.sharepoint.com/:w:/r/personal/khonde_p_northeastern_edu/Documents/PURVANG%20KHONDE.docx?d=w2af2df70ea6240ac9f72c3a90220cd8a&csf=1&web=1&e=IjYVcX"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <Button variant="default" className="gap-2 text-sm sm:text-base">
                 <FileDown size={18} />
                 Download Resume
